@@ -18,20 +18,24 @@ class ClickCount {
         }
     }
     addAutoClicks() {
-        this.clickCount += this.companionCount;
-    }
-    
-    increaseClicksPerSecond(){
-        setInterval(() => {
-            addAutoClicks(); }, 1000);
+        this.clickCount += (this.companionCount * this.clickAmount);
     }
     purchaseCompounder(){
         if(this.clickCount >= this.compounderCost){
             this.clickCount -= this.compounderCost;
             this.compounderCount++;
             this.compounderCost = this.compounderCost * 1.1;        
-            this.clickAmount =  this.clickAmount + (this.clickCount * 0.2);
+            this.clickAmount =  this.clickAmount + (this.compounderCount * 0.2);
         }
+    }
+    getClickCount(){
+        return this.clickCount;
+    }
+    getCompanionCount(){
+        return this.companionCount;
+    }
+    getCompounderCount(){
+        return this.compounderCount;
     }
 }
 

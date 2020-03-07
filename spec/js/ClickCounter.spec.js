@@ -76,21 +76,31 @@ describe('Clicking Calamity tests', () => {
             expect(Math.floor(underTest.compounderCost)).toBe(11);
         });
         it('should Increase the amount of clicks added to the click count by 1.2 after the first _Compounder_ is purchased.', () => {
-            for (let i=0; i<= 10; i++){
+            for (let i = 0; i <= 10; i++) {
                 underTest.countClick();
             }
             underTest.purchaseCompounder();
             underTest.countClick();
             expect(underTest.clickAmount).toBe(1.2);
         });
-        it('should increase the amount of clicks added to the click count by 2.4 when the second compunder is purchased', () =>{
-            for (let i=0; i<= 20; i++){
+        it('should increase the amount of clicks added to the click count by 2.4 when the second compunder is purchased', () => {
+            for (let i = 0; i <= 20; i++) {
                 underTest.countClick();
             }
             underTest.purchaseCompounder();
             underTest.purchaseCompounder();
             underTest.countClick();
             expect(underTest.clickAmount).toBe(3.2);
+        });
+        it('When an Add auto clicks event is executed, increase the value of each auto click by the amount of the click value multiplier.', () => {
+            for (let i = 0; i <= 110; i++) {
+                underTest.countClick();
+            }
+            underTest.purchaseCompanion();
+            underTest.countClick();
+            underTest.purchaseCompounder();
+            underTest.countClick();
+            expect(underTest.clickAmount).toBe(1.4);
         });
     });
 });

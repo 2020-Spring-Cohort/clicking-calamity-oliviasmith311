@@ -43,5 +43,8 @@ class ClickCount {
     getCompounderCost(){
         return this.compounderCost;
     }
+    getClickAmount(){
+        return this.clickAmount;
+    }
 }
 

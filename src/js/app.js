@@ -18,22 +18,21 @@ const makeCompanionButton = (button, display, amount) => {
     button.addEventListener('click', ()=> {
         amount.purchaseCompanion();        
         updateCompanionCount(display, amount);
+        button.innerHTML = 'Purchase Click Companion for ' + amount.getCompanionCost() + ' clicks';
     });
 }
 const makeCompounderButton = (button, display, amount) => {
     button.addEventListener('click', () => {
         amount.purchaseCompounder();        
         updateCompounderCount(display, amount);
+        button.innerHTML = 'Purchase Click Compounder for ' + amount.getCompounderCost() + ' clicks';
 
     });
 }
-// function increaseClicksPerSecond(){
-//     setInterval(() => {
-//         addAutoClicks(); }, 1000);
-// } 
 
 const updateClickDisplay = (display, amount) => {
-    display.innerHTML = 'Click amount is: ' + amount.getClickCount();
+    display.innerHTML = 'Click amount is: ' + amount.getClickCount() + '. Each click is worth ' + amount.getClickAmount();
+
 }
 
 const updateCompanionCount = (display, amount) => {
@@ -44,9 +43,10 @@ const updateCompounderCount = (display, amount) => {
     display.innerHTML = 'Compounder Count is: ' + amount.getCompounderCount();
 }
 
-updateClickDisplay(clickDisplay, clickAmount);
-updateCompanionCount(companionCount, clickAmount);
-updateCompounderCount(compounderCount, clickAmount);
+
 makeClickButton(clickButton, clickDisplay, clickAmount);
 makeCompanionButton(companionButton, companionCount, clickAmount);
 makeCompounderButton(compounderButton, compounderCount, clickAmount);
+updateClickDisplay(clickDisplay, clickAmount);
+updateCompanionCount(companionCount, clickAmount);
+updateCompounderCount(compounderCount, clickAmount);

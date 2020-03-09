@@ -47,17 +47,6 @@ describe('Clicking Calamity tests', () => {
                 underTest.addAutoClicks();
                 expect(underTest.clickCount).toBe(1);
             });
-            // it('the click count increases every second by the amount of purchased clicking companions', () => {
-            //     for (let i = 0; i < 100; i++) {
-            //         underTest.countClick();
-            //     }
-            //     jasmine.clock().install();
-            //     underTest.purchaseCompanion();
-            //     underTest.increaseClicksPerSecond();
-            //     jasmine.clock().tick(10);
-            //     expect(underTest.clickCount).toEqual(11);
-            //     jasmine.clock().uninstall();
-            // });
         });
     });
     describe('clicking compounder tests', () => {

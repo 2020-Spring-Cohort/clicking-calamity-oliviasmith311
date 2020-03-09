@@ -5,6 +5,7 @@ body{
 h1{
     font-size: 100px;
     text-align: center;
+    margin-top: 30px;
 }
 
 .click-button{
@@ -27,4 +28,16 @@ h1{
 
 .companion{
     text-align: center;
+}
+
+.click-number{
+    margin-top: 10px;
+}
+
+.click-compounder{
+    margin-top: 10px;
+}
+
+.click-companion{
+    margin-top: 10px;
 }

@@ -1,21 +1,42 @@
 .display{
     display: grid;
-    grid-template-columns: 1fr 1fr 100px 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 100px;
 }
 
 .click{
     grid-column: 2;
-    grid-row: 1;
+}
+
+.display-buttons{
+    display: grid;
+    grid-column: 3;
+    grid-template-columns: 1;
+    grid-template-rows: 100px 100px 100px;
 }
 
 .companion{
-    grid-column: 4;
+    grid-column: 1;
     grid-row: 1;
+    align-self: flex-start;
+    justify-self: center;
 }
 
 .compounder{
-    grid-column: 4;
+    grid-column: 1;
     grid-row: 2;
+    align-self: flex-start;
+    justify-self: center;
 }
 
+.reset{
+    grid-column: 1;
+    grid-row: 3;
+    align-self: flex-start;
+    justify-self: center;
+}
+
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 100px;
+}
